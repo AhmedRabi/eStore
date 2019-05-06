@@ -9,10 +9,12 @@ import {Routes,RouterModule} from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { PriceFilterPipe } from './price-filter.pipe';
 import { CategoryFilterPipe } from './category-filter.pipe';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes:Routes =[
   {path:'',redirectTo:"/home",pathMatch:"full"},
   {path:"home",component:HomeComponent},
+  {path: 'detail/:id', component: ItemDetailsComponent},
   {path:"about",component:AboutComponent}
 ];
 
@@ -23,7 +25,8 @@ const routes:Routes =[
     HomeComponent,
     AboutComponent,
     PriceFilterPipe,
-    CategoryFilterPipe
+    CategoryFilterPipe,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(routes),FormsModule

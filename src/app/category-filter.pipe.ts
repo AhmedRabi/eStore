@@ -1,20 +1,17 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'categoryFilter'
+  name: "categoryFilter"
 })
 export class CategoryFilterPipe implements PipeTransform {
-
   transform(items: any, category: string): any {
-    var result:any=[];
-    if(category != ""){
+    var result: any = [];
+    if (category != "all") {
       for (let i = 0; i < items.length; i++) {
-          if(items[i].category == category)
-          result.push(items[i]);        
+        if (items[i].category == category) result.push(items[i]);
       }
       return result;
     }
     return items;
   }
-
 }
