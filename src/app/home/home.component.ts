@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ItemsService } from "../items.service";
+import { CartService } from "../cart.service";
 import { ConvertActionBindingResult } from "@angular/compiler/src/compiler_util/expression_converter";
 
 @Component({
@@ -12,8 +13,10 @@ export class HomeComponent implements OnInit {
   from = "";
   category = "all";
   items = [];
-  constructor(_ItemsService: ItemsService) {
+  cart;
+  constructor(_ItemsService: ItemsService, _CartService: CartService) {
     this.items = _ItemsService.getItems();
+    this.cart = _CartService.Cart;
   }
 
   ngOnInit() {}

@@ -47,7 +47,12 @@
           <div class="card text-center m-1 ">
             <div class="overlay">
               <div class="column">
-                <button class="btn btn-success">add to cart</button>
+                <button
+                  class="btn btn-success"
+                  attr.data-index="{{ item.Index }}"
+                >
+                  add to cart
+                </button>
                 <a class="btn btn-info" routerLink="/detail/{{ item.Index }}"
                   >details</a
                 >
