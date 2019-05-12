@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { ItemsService } from "../items.service";
 import { CartService } from "../cart.service";
+import { NavbarComponent } from "../navbar/navbar.component";
+import "jquery";
+declare var $: any;
 import { ConvertActionBindingResult } from "@angular/compiler/src/compiler_util/expression_converter";
 
 @Component({
@@ -16,9 +19,15 @@ export class HomeComponent implements OnInit {
   cart;
   constructor(_ItemsService: ItemsService, _CartService: CartService) {
     this.items = _ItemsService.getItems();
-    this.cart = _CartService.Cart;
+    this.cart = _CartService;
   }
 
+  addToCart(id) {
+    debugger;
+    this.cart.increaseQuantity(parseInt(id));
+    var qty = this.cart.totalQuantity();
+    document.getElementById("Cart__").innerHTML = "Items in Cart :  " + qty;
+  }
   ngOnInit() {}
   convertRange = function(range: string) {
     this.prices = range.split("-");

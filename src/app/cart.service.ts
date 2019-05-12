@@ -31,5 +31,15 @@ export class CartService {
       }
     }
   }
+  updateCart() {
+    return this.Cart;
+  }
+  totalQuantity() {
+    var sum: number = 0;
+    this.Cart.forEach(element => {
+      sum += element.qty;
+    });
+    return sum;
+  }
   constructor() {}
 }
