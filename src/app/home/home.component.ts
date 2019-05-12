@@ -28,7 +28,13 @@ export class HomeComponent implements OnInit {
     var qty = this.cart.totalQuantity();
     document.getElementById("Cart__").innerHTML = "Items in Cart :  " + qty;
   }
-  ngOnInit() {}
+  updateSpan() {
+    var qty = this.cart.totalQuantity();
+    document.getElementById("Cart__").innerHTML = "Items in Cart :  " + qty;
+  }
+  ngOnInit() {
+    this.updateSpan();
+  }
   convertRange = function(range: string) {
     this.prices = range.split("-");
   };
