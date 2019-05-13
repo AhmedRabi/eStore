@@ -22,9 +22,8 @@ export class HomeComponent implements OnInit {
     this.cart = _CartService;
   }
 
-  addToCart(id) {
-    debugger;
-    this.cart.increaseQuantity(parseInt(id));
+  addToCart(id: number) {
+    this.cart.increaseQuantity(id);
     var qty = this.cart.totalQuantity();
     document.getElementById("Cart__").innerHTML = "Items in Cart :  " + qty;
   }

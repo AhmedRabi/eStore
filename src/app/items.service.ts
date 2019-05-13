@@ -4,6 +4,18 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class ItemsService {
+  private images: { src: string; alt: string }[] = [
+    { src: "http://www.placekitten.com/350/350", alt: "350*350 image" },
+    { src: "http://www.placekitten.com/350/450", alt: "350*450 image" },
+    { src: "http://www.placekitten.com/350/550", alt: "350*550 image" },
+    { src: "http://www.placekitten.com/450/650", alt: "450*650 image" }
+  ];
+  getImages() {
+    return this.images;
+  }
+  getImage(id: number) {
+    return this.images[id];
+  }
   private items: any = [
     {
       name: "Sony Xperia XZ3",

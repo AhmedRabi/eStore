@@ -1,0 +1,26 @@
+.container {
+  h2 {
+    margin-bottom: 30px;
+  }
+  .flex-column {
+    flex-direction: column;
+    img {
+      max-height: 100px;
+    }
+  }
+  .image-holder {
+    width: 100%;
+    padding: 2px;
+    .img-fluid {
+      max-height: 400px;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      ul {
+        list-style: disc;
+      }
+    }
+  }
+}

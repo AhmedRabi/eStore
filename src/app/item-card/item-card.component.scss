@@ -1,0 +1,30 @@
+.card {
+  height: 280px;
+  position: relative;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 280px;
+  width: 100%;
+  position: absolute;
+  display: none;
+  .column {
+    position: relative;
+    .btn {
+      position: absolute;
+    }
+    $top: 100px;
+    .btn-success {
+      top: $top;
+      left: 33%;
+    }
+    .btn-info {
+      top: $top + 50px;
+      left: 38%;
+      color: #fff;
+    }
+  }
+}
+.card:hover .overlay {
+  display: block;
+}

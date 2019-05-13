@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>{{ item.category }} > {{ item.subCategory }}</h2>
+  <div class="row">
+    <div class="col-1 flex-column">
+      <img
+        *ngFor="let image of images; let i = Index"
+        [src]="image.src"
+        [alt]="image.alt"
+        class="img-fluid my-1"
+        [attr.data-index]="i"
+        (click)="changeCurrentImage($event)"
+      />
+    </div>
+    <div class="col-4">
+      <div class="image-holder">
+        <img
+          class="img-fluid"
+          [src]="currentImage.src"
+          [alt]="currentImage.alt"
+        />
+      </div>
+    </div>
+    <div class="col-4 text-center">
+      <ul>
+        <li>
+          <h3>{{ item.name }}</h3>
+        </li>
+        <li>
+          <h4>{{ item.price | currency: "EGP" }}</h4>
+        </li>
+        <li>
+          <h4>{{ item.balance }} Left in Stock</h4>
+        </li>
+        <li>
+          Details:
+          <ul>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+            <li>
+              bla bla bla
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="btn btn-success">add to cart</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

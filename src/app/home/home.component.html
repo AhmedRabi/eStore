@@ -1,80 +1,62 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 bg-info text-light py-2">
-      <h4>Filters</h4>
-      <div class="form-group">
-        <label>Price</label>
-        <label>from</label>
-        <input
-          type="text"
-          class="form-control "
-          [(ngModel)]="from"
-          id="priceFilter"
-          placeholder="500"
-        />
-        <label for="">to</label>
-        <input
-          type="text"
-          class="form-control "
-          [(ngModel)]="to"
-          id="priceFilter"
-          placeholder="5000"
-        />
+<section id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 bg-info text-light py-2">
+        <h4>Filters</h4>
+        <div class="form-group">
+          <label>Price</label>
+          <label>from</label>
+          <input
+            type="text"
+            class="form-control "
+            [(ngModel)]="from"
+            id="priceFilter"
+            placeholder="500"
+          />
+          <label for="">to</label>
+          <input
+            type="text"
+            class="form-control "
+            [(ngModel)]="to"
+            id="priceFilter"
+            placeholder="5000"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Categories">Category</label>
+          <select
+            class="form-control"
+            name="Categories"
+            [(ngModel)]="category"
+            id="categories"
+          >
+            <option value="all">All categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Home Essentials">Home Essentials</option>
+            <option value="Men's Wear">Men's Wear</option>
+          </select>
+        </div>
+        <span id="Cart__">Cart: </span>
       </div>
-      <div class="form-group">
-        <label for="Categories">Category</label>
-        <select
-          class="form-control"
-          name="Categories"
-          [(ngModel)]="category"
-          id="categories"
-        >
-          <option value="all">All categories</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Home Essentials">Home Essentials</option>
-          <option value="Men's Wear">Men's Wear</option>
-        </select>
-      </div>
-      <span id="Cart__">Cart: </span>
-    </div>
-    <div class="col-md-9">
-      <div class="row">
-        <div
-          class="col-md-4 col-12 my-2"
-          *ngFor="
-            let item of items | priceFilter: from:to | categoryFilter: category
-          "
-        >
-          <div class="card text-center m-1 ">
-            <div class="overlay">
-              <div class="column">
-                <button
-                  class="btn btn-success add"
-                  (click)="addToCart(item.Index)"
-                  attr.data-index="{{ item.Index }}"
-                >
-                  add to cart
-                </button>
-                <a class="btn btn-info" routerLink="/detail/{{ item.Index }}"
-                  >details</a
-                >
-              </div>
-            </div>
-            <div class="card-body">
-              <div
-                style="width:100%;height:120px;border-radius: 5px;font-weight: bold"
-                class="bg-warning"
-              >
-                Image
-              </div>
-              <h6 class="card-title">{{ item.name }}</h6>
-              <p class="card-text bg-info rounded p-2 text-light">
-                {{ item.price | currency: "EGP" }}
-              </p>
-            </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div
+            class="col-md-4 col-12 my-2"
+            *ngFor="
+              let item of items
+                | priceFilter: from:to
+                | categoryFilter: category
+            "
+          >
+            <!-- this is a component for the Item Card -->
+            <!-- there is some property binding  -->
+            <app-item-card
+              [item]="item"
+              (onItemAdded)="addToCart($event)"
+            ></app-item-card>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>

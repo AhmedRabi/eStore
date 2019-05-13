@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { PriceFilterPipe } from './price-filter.pipe';
 import { CategoryFilterPipe } from './category-filter.pipe';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { ItemCardComponent } from './item-card/item-card.component';
+import { ItemDetailsCardComponent } from './item-details-card/item-details-card.component';
 
 const routes:Routes =[
   {path:'',redirectTo:"/home",pathMatch:"full"},
@@ -26,7 +28,9 @@ const routes:Routes =[
     AboutComponent,
     PriceFilterPipe,
     CategoryFilterPipe,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    ItemCardComponent,
+    ItemDetailsCardComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(routes),FormsModule
