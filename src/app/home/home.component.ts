@@ -12,6 +12,7 @@ import { ConvertActionBindingResult } from "@angular/compiler/src/compiler_util/
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
+  // @Output() onAddtoCart = new EventEmitter<number>();
   to = "";
   from = "";
   category = "all";
@@ -23,9 +24,10 @@ export class HomeComponent implements OnInit {
   }
 
   addToCart(id: number) {
-    this.cart.increaseQuantity(id);
-    var qty = this.cart.totalQuantity();
-    document.getElementById("Cart__").innerHTML = "Items in Cart :  " + qty;
+    // this.cart.increaseQuantity(id);
+    // var qty = this.cart.totalQuantity();
+    // document.getElementById("Cart__").innerHTML = "Items in Cart :  " + qty;
+    //   this.onAddtoCart.emit(id);
   }
   updateSpan() {
     var qty = this.cart.totalQuantity();

@@ -1,12 +1,14 @@
 import { Injectable } from "@angular/core";
 import { ItemsService } from "./items.service";
 import { element } from "@angular/core/src/render3";
+import { EventEmitter } from "events";
 
 @Injectable({
   providedIn: "root"
 })
 export class CartService {
   Cart: any = [];
+  quantityChange: EventEmitter = new EventEmitter();
 
   increaseQuantity(id) {
     var found = false;
@@ -23,6 +25,7 @@ export class CartService {
     } else {
       this.Cart.push({ id: id, qty: 1 });
     }
+    // this.quantityChange.next();
   }
   decreaseQuantity(id) {
     for (let i = 0; i < this.Cart.length; i++) {
