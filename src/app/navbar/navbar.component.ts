@@ -26,12 +26,12 @@ export class NavbarComponent implements OnInit {
         return event == "active";
       });
       if (x == null) {
-        $(event.target).addClass("active");
-        var m = $(event.target).siblings();
-        console.log(m);
-        m.forEach(element => {
-          element.removeClass("active");
-        });
+        $(event.target).parent().addClass("active");
+        var m = $(event.target).parent().siblings();
+       m.each(function(i,obj){
+         $(this).removeClass("active");
+       })
+       
       }
     });
   }

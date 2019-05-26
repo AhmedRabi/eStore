@@ -5,32 +5,40 @@
     .navbar-brand {
         font-weight: 800;
         font-size: 25pt;
-    }
-    a {
         color: beeColor(yellow);
     }
     a.cart-icon {
         color: white;
     }
     ul li {
-        padding: 10px 15px;
+        padding: 5px 15px;
         vertical-align: middle;
+        a {
+            color: beeColor(yellow);
+            font-size: 15px;
+            font-weight: 500;
+        }
         fa-icon {
             position: relative;
             top: 5px;
-            font-size: 18pt;
+            font-size: 20pt;
+            color: white;
         }
         div.hexagon-wrapper {
-            padding: 2px;
+            padding: 3px;
             background-color: beeColor(brown);
+            width: 30px;
+            height: 30px;
             position: relative;
+            top: -40px;
+            right: -13px;
+            z-index: 0;
             div.notification {
                 text-align: center;
-                width: 25px;
-                height: 25px;
+                width: 100%;
+                height: 100%;
                 color: bumblebeeColor(brown);
                 background-color: bumblebeeColor(yellow);
-                position: absolute;
                 font-weight: 800;
             }
         }
