@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Injectable } from "@angular/core";
 import { CartService } from "../cart.service";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "jquery";
+import { ACTIVE_INDEX } from "@angular/core/src/render3/interfaces/container";
 declare var $: any;
 
 @Component({
@@ -10,10 +12,27 @@ declare var $: any;
   styleUrls: ["./navbar.component.scss"]
 })
 export class NavbarComponent implements OnInit {
+  faShoppingCart = faShoppingCart;
   cart;
   qty = "";
   constructor(_CartService: CartService) {
     this.cart = _CartService;
   }
-  ngOnInit() {}
+  ngOnInit() {
+    $("ul li").on("click", function(event) {
+      console.log(event);
+      var classList = this.className.split(/\s+/);
+      var x = classList.find(function(event) {
+        return event == "active";
+      });
+      if (x == null) {
+        $(event.target).addClass("active");
+        var m = $(event.target).siblings();
+        console.log(m);
+        m.forEach(element => {
+          element.removeClass("active");
+        });
+      }
+    });
+  }
 }

@@ -19,6 +19,20 @@ $bumblebee: (
 @function bumblebeeColor($color) {
   @return map-get($bumblebee, $color);
 }
+section {
+  background-color: beeColor(dark-yellow);
+}
+.hexagon {
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
 
 .btn-success {
   background-color: beeColor(yellow);
@@ -47,4 +61,13 @@ $bumblebee: (
 .bg-black {
   background-color: bumblebeeColor(black);
   color: white;
+}
+.bg-yellow {
+  background-color: beeColor(yellow);
+  color: bumblebeeColor(black);
+}
+
+a {
+  color: bumblebeeColor(black);
+  font-weight: 500;
 }

@@ -1,0 +1,39 @@
+@import "../../styles.scss";
+.navbar {
+  padding: 0 30px;
+  background-color: bumblebeeColor(black);
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 25pt;
+  }
+  a {
+    color: beeColor(yellow);
+  }
+  a.cart-icon {
+    color: white;
+  }
+  ul li {
+    padding: 10px 15px;
+    vertical-align: middle;
+    fa-icon {
+      position: relative;
+      top: 5px;
+      font-size: 18pt;
+    }
+    span.notification {
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid bumblebeeColor(light-brown);
+
+      background-color: bumblebeeColor(brown);
+      color: bumblebeeColor(yellow);
+      position: relative;
+      top: -5px;
+      right: 8px;
+      font-weight: 800;
+    }
+  }
+  ul li.active {
+    border-bottom: 3px solid white;
+  }
+}
