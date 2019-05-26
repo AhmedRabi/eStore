@@ -1,24 +1,22 @@
 <div class="card-container hexagon">
-  <div class="card hexagon text-center m-1 ">
-    <div class="overlay hexagon">
-      <div class="column">
-        <button
-          class="btn btn-success add"
-          (click)="onAddToCart(item.Index)"
-          attr.data-index="{{ item.Index }}"
-        >
+    <div class="card hexagon text-center m-1 ">
+        <div class="overlay hexagon">
+            <div class="column">
+                <button class="btn btn-success add" (click)="onAddToCart(item.Index)" attr.data-index="{{ item.Index }}">
           add to cart
         </button>
-        <a class="btn btn-info" routerLink="/detail/{{ item.Index }}"
-          >details</a
+                <a class="btn btn-info" routerLink="/detail/{{ item.Index }}">details</a
         >
       </div>
     </div>
-    <div class="card-body">
+  </div>
+</div>
+<!-- </div>
+    <div class="card-body hexagon">
       <div style="width:100%;height:120px;border-radius: 5px;font-weight: bold">
         <img
-          src="http://www.placekitten.com/150/120"
-          class="rounded-circle"
+          src="http://www.placekitten.com/3000/1500"
+          class="hexagon img-custom"
           alt="alt image"
         />
       </div>
@@ -28,4 +26,4 @@
       </p>
     </div>
   </div>
-</div>
+</div> -->

@@ -1,73 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
-$Bee-colors: (
-  yellow: #f2b705,
-  light-yellow: #f2da91,
-  dark-yellow: #d98e04,
-  light-brown: #a65d03,
-  brown: #8c4303
-);
-$bumblebee: (
-  black: #09090d,
-  brown: #734a26,
-  light-brown: #bf772d,
-  light-yellow: #d99c2b,
-  yellow: #f2c029
-);
+
+$Bee-colors: ( yellow: #f2b705, light-yellow: #f2da91, dark-yellow: #d98e04, light-brown: #a65d03, brown: #8c4303);
+$bumblebee: ( black: #09090d, brown: #734a26, light-brown: #bf772d, light-yellow: #d99c2b, yellow: #f2c029);
 @function beeColor($color) {
-  @return map-get($Bee-colors, $color);
+    @return map-get($Bee-colors, $color);
 }
+
 @function bumblebeeColor($color) {
-  @return map-get($bumblebee, $color);
+    @return map-get($bumblebee, $color);
 }
+
 section {
-  background-color: beeColor(dark-yellow);
+    background-color: #fff9a2;
 }
+
 .hexagon {
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: polygon( 50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .btn-success {
-  background-color: beeColor(yellow);
-  color: bumblebeeColor(black);
-  border: 1px solid beeColor(yellow);
+    background-color: beeColor(yellow);
+    color: bumblebeeColor(black);
+    border: 1px solid beeColor(yellow);
 }
+
 .btn-success:hover {
-  background-color: beeColor(dark-yellow);
-  color: white;
-  border: 1px solid beeColor(dark-yellow);
+    background-color: beeColor(dark-yellow);
+    color: white;
+    border: 1px solid beeColor(dark-yellow);
 }
+
 .btn-info {
-  background-color: beeColor(dark-yellow);
-  color: white;
-  border: 1px solid beeColor(dark-yellow);
+    background-color: beeColor(dark-yellow);
+    color: white;
+    border: 1px solid beeColor(dark-yellow);
 }
+
 .btn-info:hover {
-  background-color: beeColor(light-brown);
-  color: white;
-  border: 1px solid beeColor(light-brown);
+    background-color: beeColor(light-brown);
+    color: white;
+    border: 1px solid beeColor(light-brown);
 }
+
 .bg-honey {
-  background-color: beeColor(dark-yellow);
-  color: white;
+    background-color: beeColor(dark-yellow);
+    color: white;
 }
+
 .bg-black {
-  background-color: bumblebeeColor(black);
-  color: white;
+    background-color: bumblebeeColor(black);
+    color: white;
 }
+
 .bg-yellow {
-  background-color: beeColor(yellow);
-  color: bumblebeeColor(black);
+    background-color: beeColor(yellow);
+    color: bumblebeeColor(black);
 }
 
 a {
-  color: bumblebeeColor(black);
-  font-weight: 500;
+    color: bumblebeeColor(black);
+    font-weight: 500;
 }

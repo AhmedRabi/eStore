@@ -1,50 +1,52 @@
 @import "../../styles.scss";
 .card-container {
-  padding: 2px;
-  background-color: beeColor(brown);
-  .card {
-    height: 280px;
-    position: relative;
-
-    background-color: beeColor(yellow);
-    // border: 2px solid beeColor(dark-yellow);
-    .card-body {
-      justify-content: center;
-      text-align: center;
-
-      .card-text {
-        max-width: 50%;
-        margin: 0 auto;
-        text-align: center;
-      }
+    padding: 2px;
+    background-color: beeColor(brown);
+    .card {
+        height: 320px;
+        position: relative;
+        background-color: beeColor(yellow);
+        // border: 2px solid beeColor(dark-yellow);
+        .card-body {
+            justify-content: center;
+            text-align: center;
+            .card-text {
+                max-width: 50%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .img-custom {
+                width: 100%;
+                height: 100%;
+                position: relative
+            }
+        }
     }
-  }
-
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: none;
-    z-index: 9999999;
-    .column {
-      position: relative;
-      .btn {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        width: 100%;
         position: absolute;
-      }
-      $top: 100px;
-      .btn-success {
-        top: $top;
-        left: 33%;
-      }
-      .btn-info {
-        top: $top + 50px;
-        left: 38%;
-        color: #fff;
-      }
+        display: none;
+        z-index: 9999999;
+        .column {
+            position: relative;
+            .btn {
+                position: absolute;
+            }
+            $top: 100px;
+            .btn-success {
+                top: $top;
+                left: 33%;
+            }
+            .btn-info {
+                top: $top + 50px;
+                left: 38%;
+                color: #fff;
+            }
+        }
     }
-  }
-  .card:hover .overlay {
-    display: block;
-  }
+    .card:hover .overlay {
+        display: block;
+    }
 }
