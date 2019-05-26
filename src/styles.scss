@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+$Bee-colors: (
+  yellow: #f2b705,
+  light-yellow: #f2da91,
+  dark-yellow: #d98e04,
+  light-brown: #a65d03 brown: #8c4303
+);
+$bumblebee: (
+  black: #09090d,
+  brown: #734a26,
+  light-brown: #bf772d,
+  light-yellow: #d99c2b,
+  yellow: #f2c029
+);
+@function beeColor($color) {
+  @return map-get($Bee-colors, $color);
+}
+@function bumblebeeColor($color) {
+  @return map-get($bumblebee, $color);
+}
