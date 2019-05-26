@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+
+#home {
+  background-color: beeColor(dark-yellow);
+
+  .filter-menu {
+    background-color: beeColor(light-brown);
+  }
+}

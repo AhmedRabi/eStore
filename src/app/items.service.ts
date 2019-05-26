@@ -98,7 +98,7 @@ export class ItemsService {
       Index: 10
     },
     {
-      name: "Toshiba GR-EFV45-S Refrigerator 3 Door- 16 Feet, Silver",
+      name: "Toshiba  Refrigerator 3 Door",
       price: 6000,
       balance: 30,
       category: "Home Essentials",
@@ -106,8 +106,7 @@ export class ItemsService {
       Index: 11
     },
     {
-      name:
-        "Unionaire C6090SS-DC-511-IDSC-S i Cook Stainless Steel 5 Burners Gas Cooker - 60×90 cm",
+      name: "Unionaire i Cook Stainless Steel 5 Burners Gas Cooker",
       price: 6000,
       balance: 30,
       category: "Home Essentials",
