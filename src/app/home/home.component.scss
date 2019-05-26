@@ -1,7 +1,11 @@
 @import "../../styles.scss";
-
 #home {
-  .filter-menu {
-    background-color: beeColor(light-brown);
-  }
+    .filter-menu {
+        background-color: beeColor(light-brown);
+    }
+    .row {
+        .col-md-3:nth-child(5) {
+            margin-left: 12.5%;
+        }
+    }
 }
