@@ -12,6 +12,7 @@ $bumblebee: ( black: #09090d, brown: #734a26, light-brown: #bf772d, light-yellow
 
 section {
     background-color: #fff9a2;
+    min-height: calc(100vh - 63px);
 }
 
 .hexagon {

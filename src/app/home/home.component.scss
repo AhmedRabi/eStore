@@ -4,7 +4,11 @@
         background-color: beeColor(light-brown);
     }
     .row {
+        // making it like a bee cells
         .col-md-3:nth-child(5) {
+            margin-left: 12.5%;
+        }
+        .col-md-3:nth-child(7n+5) {
             margin-left: 12.5%;
         }
     }
