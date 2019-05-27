@@ -9,7 +9,9 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-    <span class="navbar-toggler-icon"></span>
+    <span class="toggler"></span>
+    <span class="toggler"></span>
+    <span class="toggler"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavId">
     <ul class="navbar-nav ml-auto px-5 mt-2 mt-lg-0">
@@ -19,15 +21,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/about">About</a>
       </li>
-      <li>
-        <div class="hexagon-wrapper hexagon">
-          <div class="notification hexagon">0</div>
-        </div>
-        <fa-icon [icon]="faShoppingCart"></fa-icon>
-      </li>
+      <li></li>
       <!-- <li>
         <input class="form-control" id="Cart" [(ngModel)]="qty" />
       </li> -->
     </ul>
+
+    <fa-icon [icon]="faShoppingCart"></fa-icon>
+    <div class="hexagon-wrapper hexagon">
+      <div class="notification hexagon">0</div>
+    </div>
   </div>
 </nav>

@@ -7,6 +7,12 @@
     font-size: 25pt;
     color: beeColor(yellow);
   }
+  span.toggler {
+    display: block;
+    border-top: 2px solid beeColor(yellow);
+    width: 20px;
+    margin-bottom: 4px;
+  }
   a.cart-icon {
     color: white;
   }
@@ -18,33 +24,32 @@
       font-size: 15px;
       font-weight: 500;
     }
-    fa-icon {
-      position: relative;
-      top: -15px;
-      right: 10px;
-      font-size: 20pt;
-      color: white;
-    }
-    div.hexagon-wrapper {
-      padding: 3px;
-      background-color: beeColor(brown);
-      width: 30px;
-      height: 30px;
-      position: relative;
-      top: 2px;
-      right: 2px;
-      z-index: 2;
-      div.notification {
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        color: bumblebeeColor(brown);
-        background-color: bumblebeeColor(yellow);
-        font-weight: 800;
-      }
-    }
   }
+
   ul li.active {
     border-bottom: 3px solid white;
+  }
+  fa-icon {
+    position: relative;
+    font-size: 20pt;
+    color: white;
+  }
+  div.hexagon-wrapper {
+    padding: 3px;
+    background-color: beeColor(brown);
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -12px;
+    right: 2px;
+    z-index: 2;
+    div.notification {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      color: bumblebeeColor(brown);
+      background-color: bumblebeeColor(yellow);
+      font-weight: 800;
+    }
   }
 }

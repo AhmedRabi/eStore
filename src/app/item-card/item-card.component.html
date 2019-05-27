@@ -1,11 +1,16 @@
 <div class="card-container hexagon">
-    <div class="card hexagon text-center m-1 ">
-        <div class="overlay hexagon">
-            <div class="column">
-                <button class="btn btn-success add" (click)="onAddToCart(item.Index)" attr.data-index="{{ item.Index }}">
+  <div class="card hexagon text-center m-1 ">
+    <div class="overlay hexagon">
+      <div class="column">
+        <button
+          class="btn btn-honey add"
+          (click)="onAddToCart(item.Index)"
+          attr.data-index="{{ item.Index }}"
+        >
           add to cart
         </button>
-                <a class="btn btn-info" routerLink="/detail/{{ item.Index }}">details</a
+        <a class="btn btn-info-honey" routerLink="/detail/{{ item.Index }}"
+          >details</a
         >
       </div>
     </div>

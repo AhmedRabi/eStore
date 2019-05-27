@@ -2,6 +2,7 @@
 #home {
   .filter-menu {
     background-color: beeColor(light-brown);
+    min-height: calc(100vh - 79px);
     input {
       max-width: 40%;
     }
@@ -14,13 +15,15 @@
       margin: 0 3px;
     }
   }
-  .row {
-    // making it like a bee cells
-    .col-md-3:nth-child(5) {
-      margin-left: 12.5%;
-    }
-    .col-md-3:nth-child(7n + 5) {
-      margin-left: 12.5%;
+  @include desktop {
+    .row {
+      // making it like a bee cells
+      .col-md-3:nth-child(5) {
+        margin-left: 12.5%;
+      }
+      .col-md-3:nth-child(7n + 5) {
+        margin-left: 12.5%;
+      }
     }
   }
 }
