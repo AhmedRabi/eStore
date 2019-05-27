@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { CartService } from "../cart.service";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "jquery";
-import { ACTIVE_INDEX } from "@angular/core/src/render3/interfaces/container";
+
 declare var $: any;
 
 @Component({
@@ -19,20 +19,31 @@ export class NavbarComponent implements OnInit {
     this.cart = _CartService;
   }
   ngOnInit() {
-    $("ul li").on("click", function(event) {
-      console.log(event);
-      var classList = this.className.split(/\s+/);
-      var x = classList.find(function(event) {
-        return event == "active";
+    this.cart.OnQuantityChange.subscribe(value => {
+      var x = document.querySelector(".notification");
+      x.innerHTML = this.cart.totalQuantity();
+    });
+
+    //jQuery starts here
+    $(document).ready(function() {
+      $("ul li").on("click", function(event) {
+        console.log(event);
+        var classList = this.className.split(/\s+/);
+        var x = classList.find(function(event) {
+          return event == "active";
+        });
+        if (x == null) {
+          $(event.target)
+            .parent()
+            .addClass("active");
+          var m = $(event.target)
+            .parent()
+            .siblings();
+          m.each(function(i, obj) {
+            $(this).removeClass("active");
+          });
+        }
       });
-      if (x == null) {
-        $(event.target).parent().addClass("active");
-        var m = $(event.target).parent().siblings();
-       m.each(function(i,obj){
-         $(this).removeClass("active");
-       })
-       
-      }
     });
   }
 }
