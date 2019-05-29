@@ -1,35 +1,28 @@
 <nav class="navbar navbar-expand-sm  ">
-  <a class="navbar-brand" routerLink="/home">BeeCommerce</a>
-  <button
-    class="navbar-toggler d-lg-none"
-    type="button"
-    data-toggle="collapse"
-    data-target="#collapsibleNavId"
-    aria-controls="collapsibleNavId"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+    <a class="navbar-brand" routerLink="/home">BeeCommerce</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
     <span class="toggler"></span>
     <span class="toggler"></span>
     <span class="toggler"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavId">
-    <ul class="navbar-nav ml-auto px-5 mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link active" routerLink="/home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About</a>
-      </li>
-      <li></li>
-      <!-- <li>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto px-5 mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link active" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/about">About</a>
+            </li>
+            <li></li>
+            <!-- <li>
         <input class="form-control" id="Cart" [(ngModel)]="qty" />
       </li> -->
-    </ul>
-
-    <fa-icon [icon]="faShoppingCart"></fa-icon>
-    <div class="hexagon-wrapper hexagon">
-      <div class="notification hexagon">0</div>
+        </ul>
+        <a routerLink="/cart">
+            <fa-icon [icon]="faShoppingCart"></fa-icon>
+            <div class="hexagon-wrapper hexagon">
+                <div class="notification hexagon">0</div>
+            </div>
+        </a>
     </div>
-  </div>
 </nav>

@@ -1,55 +1,59 @@
 @import "../../styles.scss";
 .navbar {
-  padding: 0 30px;
-  background-color: bumblebeeColor(black);
-  .navbar-brand {
-    font-weight: 800;
-    font-size: 25pt;
-    color: beeColor(yellow);
-  }
-  span.toggler {
-    display: block;
-    border-top: 2px solid beeColor(yellow);
-    width: 20px;
-    margin-bottom: 4px;
-  }
-  a.cart-icon {
-    color: white;
-  }
-  ul li {
-    padding: 5px 15px;
-    vertical-align: middle;
-    a {
-      color: beeColor(yellow);
-      font-size: 15px;
-      font-weight: 500;
+    padding: 0 30px;
+    background-color: bumblebeeColor(black);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999999999999999;
+    .navbar-brand {
+        font-weight: 800;
+        font-size: 25pt;
+        color: beeColor(yellow);
     }
-  }
-
-  ul li.active {
-    border-bottom: 3px solid white;
-  }
-  fa-icon {
-    position: relative;
-    font-size: 20pt;
-    color: white;
-  }
-  div.hexagon-wrapper {
-    padding: 3px;
-    background-color: beeColor(brown);
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: -12px;
-    right: 2px;
-    z-index: 2;
-    div.notification {
-      text-align: center;
-      width: 100%;
-      height: 100%;
-      color: bumblebeeColor(brown);
-      background-color: bumblebeeColor(yellow);
-      font-weight: 800;
+    span.toggler {
+        display: block;
+        border-top: 2px solid beeColor(yellow);
+        width: 20px;
+        margin-bottom: 4px;
     }
-  }
+    a.cart-icon {
+        color: white;
+    }
+    ul li {
+        padding: 5px 15px;
+        vertical-align: middle;
+        a {
+            color: beeColor(yellow);
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+    ul li.active {
+        border-bottom: 3px solid white;
+    }
+    fa-icon {
+        position: relative;
+        font-size: 20pt;
+        color: white;
+    }
+    div.hexagon-wrapper {
+        padding: 3px;
+        background-color: beeColor(brown);
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: -12px;
+        right: 2px;
+        z-index: 2;
+        div.notification {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            color: bumblebeeColor(brown);
+            background-color: bumblebeeColor(yellow);
+            font-weight: 800;
+        }
+    }
 }

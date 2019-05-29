@@ -9,17 +9,20 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { HomeComponent } from "./home/home.component";
 import { Routes, RouterModule } from "@angular/router";
 import { AboutComponent } from "./about/about.component";
+
 import { PriceFilterPipe } from "./price-filter.pipe";
 import { CategoryFilterPipe } from "./category-filter.pipe";
 import { ItemDetailsComponent } from "./item-details/item-details.component";
 import { ItemCardComponent } from "./item-card/item-card.component";
 import { ItemDetailsCardComponent } from "./item-details-card/item-details-card.component";
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "detail/:id", component: ItemDetailsComponent },
-  { path: "about", component: AboutComponent }
+  { path: "about", component: AboutComponent },
+  { path: "cart", component: CartComponent }
 ];
 
 @NgModule({
@@ -32,7 +35,9 @@ const routes: Routes = [
     CategoryFilterPipe,
     ItemDetailsComponent,
     ItemCardComponent,
-    ItemDetailsCardComponent
+    ItemDetailsCardComponent,
+    CartComponent,
+ 
   ],
   imports: [
     BrowserModule,

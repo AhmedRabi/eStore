@@ -34,11 +34,12 @@ $desktop: "(min-width: 1024px)";
 section {
     background-color: #fff9a2;
     min-height: calc(100vh - 59px);
+    margin-top: 59px;
+    padding-top: 20px;
 }
 
 .b-hexa {
-    padding: 1px;
-    background-color: beeColor(brown)
+    padding: 3px;
 }
 
 .hexagon {
@@ -48,9 +49,28 @@ section {
 }
 
 .side-hexa {
-    clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
-    -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+    clip-path: polygon(0% 50%, 10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%);
+    -webkit-clip-path: polygon(0% 50%, 10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%);
+    -webkit-clip-path: polygon(0% 50%, 10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%);
+    @include mobile {
+        max-width: 200px;
+        min-height: 50px;
+        margin: 3px;
+    }
+    @include tablet {
+        max-width: 400px;
+        min-height: 120px;
+        margin: 3px;
+    }
+    @include desktop {
+        max-width: 670px;
+        min-height: 200px;
+        margin: 3px;
+    }
+}
+
+.side-hexa-inner {
+    margin: 0 10%;
 }
 
 .btn-honey {

@@ -1,9 +1,11 @@
 @import "../../styles.scss";
 section {
-    .border {
-        background-color: #09c
+    .bcolor {
+        background-color: beeColor(brown);
+        border: none;
     }
     .color {
         background-color: beeColor(yellow);
+        color: beeColor(brown);
     }
 }
